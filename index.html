@@ -1,0 +1,234 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<!--<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
+		<script src="https://cdn.rawgit.com/Prinzhorn/skrollr/master/dist/skrollr.min.js"></script>
+		<script src="https://cdn.rawgit.com/Prinzhorn/skrollr-menu/master/dist/skrollr.menu.min.js"></script>
+		<script src="/PIMG.js"></script>
+  		<!-- <link rel="stylesheet" type="text/css" href="PIMG.css"> -->
+ 		<title>PIMG</title>
+ 		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+main {
+  height: 100%;
+}
+
+
+
+
+
+/*------------------------------------*\
+    #Skrollr plugin
+\*------------------------------------*/
+
+#skrollr-body {
+  height: 100%;
+  overflow: visible;
+  position: relative;
+  z-index: 2;
+}
+
+.skrollr-parallax {
+  position: fixed;
+  z-index: 1;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;  
+  overflow: hidden;
+}
+
+.no-skrollr .skrollr-parallax {
+  display: none !important;
+}
+
+.skrollr-parallax__image {
+  display: none;
+  position: absolute;  
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;  
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.skrollr-parallax__image.skrollable-between {
+  display: block;
+}
+
+
+
+
+/*------------------------------------*\
+    #Parallax-section    
+\*------------------------------------*/
+
+.parallax {
+	position: relative;
+	display: table;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+  background: #ccc center no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+/* When Skrollr plugin is active remove bg image and reset bg property */
+.skrollr .parallax {
+  background: transparent !important; /* !important override inline style */  
+}
+
+
+/**
+ * Parallax-section body centered
+ */
+.parallax__body {
+	/* centering */
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+
+/**
+ * Parallax-section title
+ */
+.parallax__title {
+	font-size: 60px;
+  line-height: 1;
+  color: #fff;
+  text-align: center; 
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+
+/**
+ * Parallax-section background images
+ */
+
+.parallax--img-cat1 {
+  background-image: url(http://lorempixel.com/1600/1400/cats/1);
+}
+
+.parallax--img-cat2 {
+  background-image: url(http://lorempixel.com/1600/1400/cats/2);
+}
+
+
+
+
+
+
+
+
+
+/*------------------------------------*\
+    #Scroll-arrow
+\*------------------------------------*/
+
+.scroll-arrow {
+	position: absolute;
+  z-index: 3;  /* above parallax */
+  left: 50%;
+  bottom: 30px;
+  width: 42px;
+  height: 20px;
+  background: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSI5NiAxNjAgMzIwIDE5MiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMzk2LjYgMTYwbDE5LjQgMjAuN0wyNTYgMzUyIDk2IDE4MC43bDE5LjMtMjAuN0wyNTYgMzEwLjV6Ii8+PC9zdmc+') center no-repeat;
+  margin-left: -23px;
+  -webkit-transition: .25s;
+  transition: .25s;
+  cursor: pointer;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  opacity: .8;
+  -webkit-tap-highlight-color: transparent;
+
+  /* Hide text */
+  font-size: 0;
+  color: transparent;
+}
+
+.scroll-arrow:hover,
+.scroll-arrow:focus {
+  opacity: 1;
+}
+
+.scroll-arrow:focus {
+  outline: none;
+}
+
+.scroll-arrow:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -20px;
+  bottom: -20px;
+  left: -20px;
+  right: -20px;
+}
+
+
+
+
+
+/**
+ * Scroll to top (in the footer)
+ */
+.scroll-arrow--top {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+	-webkit-transform-origin: 50% 50%;
+	        transform-origin: 50% 50%;
+}
+
+
+
+
+
+
+
+</style>
+
+
+		<div id="skrollr-body">
+		  
+		  <section id="cat1" class="parallax parallax--img-cat1 js-parallax">
+		    <div class="parallax__body">
+		      <h1 class="parallax__title">Cat 1</h1>
+		      <a href="#cat2" class="scroll-arrow">Cat 2</a>
+		    </div>    
+		  </section>
+		  
+		  <section id="cat2" class="parallax parallax--img-cat2 js-parallax">
+		    <div class="parallax__body">
+		      <h1 class="parallax__title">Cat 2</h1>
+		      <a href="#cat3" class="scroll-arrow">Cat 3</a>
+		    </div>   
+		  </section>
+		  
+		  <section id="cat3" class="parallax js-parallax" style="background-image: url(http://lorempixel.com/1600/1400/cats/3)">
+		    <div class="parallax__body">
+		      <h1 class="parallax__title">Cat 3</h1>
+		       <a href="#cat1" class="scroll-arrow scroll-arrow--top" data-menu-duration="2000">Cat 1</a>
+		    </div>   
+		  </section>
+		  
+		</div>
+	</body>
+</html>
+
