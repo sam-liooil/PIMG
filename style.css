@@ -18,7 +18,8 @@ html, body {
 			.videoClick {text-align:center}
 			.videoClick a{color:white;background-color:rgba(241, 241, 241, 0.25);font-size: 1.7em;cursor:pointer;cursor:hand}
 
-			#logo {width: 55%;margin-top: 20.5em;}
+			#logo1 {width: 55%; margin-top:11em;}
+			#logo2 {width: 55%;;}
 
 			#padding{
 				margin:auto;
@@ -59,9 +60,19 @@ section h1 {
 	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 	color: #fff;
-	font : normal 300 64px/1 'Josefin Sans', sans-serif;
+	font : normal 500 37px/1 'Josefin Sans', sans-serif;
 	text-align: center;
 	white-space: nowrap;
+	letter-spacing: 7px;
+	font-variant: small-caps;
+	
+}
+.boxed {
+  border: 2px solid white ;
+  outline: 3px solid black;
+  padding: 6px 2px 0px 8px;
+  background-color: #000000;
+  
 }
 
 #section02 { background-color: #99FF99;}
