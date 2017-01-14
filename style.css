@@ -21,6 +21,24 @@ html, body {
 			#logo1 {width: 55%; margin-top:11em;}
 			#logo2 {width: 55%;;}
 
+			#padding{
+				margin:auto;
+				padding: 7%;
+			}
+			#aboutContainer {
+				postition: relative;
+				width: 70%;
+				height: 22%;
+				padding: 3%;
+				background-color: black;
+			}
+			#aboutText{
+				color: white;
+				letter-spacing: 3px;
+				text-align: left;
+				font-size: 1.5em;
+			}
+
 section {
 	position: relative;
 	width: 100%;
