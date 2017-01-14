@@ -22,17 +22,18 @@ html, body {
 
 			#padding{
 				margin:auto;
-				padding: 6%;
+				padding: 7%;
 			}
 			#aboutContainer {
 				postition: relative;
-				width: 43%;
+				width: 70%;
 				height: 22%;
-				padding: 2%;
+				padding: 3%;
 				background-color: black;
 			}
 			#aboutText{
 				color: white;
+				letter-spacing: 3px;
 				text-align: left;
 				font-size: 1.5em;
 			}
