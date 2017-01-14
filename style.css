@@ -38,6 +38,8 @@ html, body {
 				letter-spacing: 3px;
 				text-align: left;
 				font-size: 1.5em;
+				font-variant: small-caps;
+				margin: 40px 37px 37px 37px;
 			}
 
 section {
