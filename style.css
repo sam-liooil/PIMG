@@ -16,7 +16,7 @@ html, body
 	height: 100%; 
 	position: 
 	relative; 
-	z-index:-2;
+	z-index: 1;
 }
 
 	#videoBlock,#videoMessage 
@@ -204,7 +204,10 @@ a span.scrollButton
 
 /*Section specific */
 
-	/*Section 1 */
+	#section01
+	{
+		background-color: black;
+	}
 
 		#section01 a 
 		{
