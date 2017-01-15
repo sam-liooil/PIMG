@@ -157,7 +157,7 @@ section h1
     background-color: #000000;
 }
 
-a span .scrollButton
+a span.scrollButton
 {
 	position: absolute;
 	top: 0;
@@ -219,7 +219,7 @@ a span .scrollButton
 		#section02 a 
 		{
 			padding-top: 60px;
-		}
+		}		
 
 	#section03 
 	{ 
