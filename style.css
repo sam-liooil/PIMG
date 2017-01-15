@@ -73,12 +73,8 @@ section h1 {
 }
 .boxed {
   border: 2px solid white ;
-  outline: 5% solid black;
-  left: 18%;
-  /*padding: 6px 2px 0px 8px;*/
-  padding-top: .5%;
-  width: 12%;
-  height: 5%;
+  outline: 3px solid black;
+  padding: 6px 2px 0px 8px;
   background-color: #000000;
   
 }
